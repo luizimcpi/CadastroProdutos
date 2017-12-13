@@ -1,10 +1,11 @@
 package cadastroprodutos.devlhse.com.cadastroprodutos.dao;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import java.sql.DatabaseMetaData;
+import cadastroprodutos.devlhse.com.cadastroprodutos.model.Produto;
 
 /**
  * Created by luizhse on 12/12/17.
@@ -31,4 +32,14 @@ public class ProdutosDao extends SQLiteOpenHelper{
         String produto = "DROP TABLE IF EXISTS produtos";
         sqLiteDatabase.execSQL(produto);
     }
+
+    public void salvarProduto(Produto produto){
+        ContentValues values = new ContentValues();
+        values.put("nomeproduto", produto.getNomeProduto());
+        values.put("descricao", produto.getDescricao());
+        values.put("quantidade", produto.getQuantidade());
+        getWritableDatabase().insert("produtos", null, values);
+    }
+
+    
 }

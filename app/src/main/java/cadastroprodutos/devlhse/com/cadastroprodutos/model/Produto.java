@@ -4,7 +4,7 @@ package cadastroprodutos.devlhse.com.cadastroprodutos.model;
  * Created by luizhse on 12/12/17.
  */
 
-public class Produtos {
+public class Produto {
 
     private Long id;
     private String nomeProduto;
