@@ -2,8 +2,11 @@ package cadastroprodutos.devlhse.com.cadastroprodutos.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+
+import java.util.ArrayList;
 
 import cadastroprodutos.devlhse.com.cadastroprodutos.model.Produto;
 
@@ -41,5 +44,19 @@ public class ProdutosDao extends SQLiteOpenHelper{
         getWritableDatabase().insert("produtos", null, values);
     }
 
-    
+    public ArrayList<Produto> getProdutos(){
+        String[] columns = {"id","nomeproduto","descricao","quantidade"};
+        Cursor cursor = getWritableDatabase().query("produtos", columns, null, null, null, null, null, null);
+        ArrayList<Produto> produtos = new ArrayList<>();
+        while (cursor.moveToNext()){
+            Produto produto = new Produto();
+            produto.setId(cursor.getLong(0));
+            produto.setNomeProduto(cursor.getString(1));
+            produto.setDescricao(cursor.getString(2));
+            produto.setQuantidade(cursor.getInt(3));
+            produtos.add(produto);
+        }
+
+        return produtos;
+    }
 }
