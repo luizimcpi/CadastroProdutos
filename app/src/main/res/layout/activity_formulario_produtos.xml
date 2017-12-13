@@ -11,5 +11,36 @@
         android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="8dp"></LinearLayout>
+        tools:layout_editor_absoluteY="8dp">
+
+        <EditText
+            android:id="@+id/editText_NomeProduto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Inserir Nome"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText_Descricao"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Descrição do Produto"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText_Quantidade"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Quantidade"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btn_Modificar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Modificar" />
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>
