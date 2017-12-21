@@ -48,8 +48,10 @@ public class FormularioProdutos extends AppCompatActivity {
 
                 if(btn_Cadastro.getText().toString().equals("Cadastrar")){
                     produtosDao.salvarProduto(produto);
-                    produtosDao.close();
+                }else{
+                    produtosDao.alterarProduto(produto);
                 }
+                produtosDao.close();
             }
         });
     }
