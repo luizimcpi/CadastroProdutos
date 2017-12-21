@@ -38,9 +38,9 @@
             android:inputType="textPersonName" />
 
         <Button
-            android:id="@+id/btn_Modificar"
+            android:id="@+id/btn_Cadastro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Modificar" />
+            android:text="botao" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

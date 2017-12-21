@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CadastroProdutos.iml" filepath="$PROJECT_DIR$/CadastroProdutos.iml" />
+      <module fileurl="file://C:\dev\workspace-pessoal\CadastroProdutos\CadastroProdutos.iml" filepath="C:\dev\workspace-pessoal\CadastroProdutos\CadastroProdutos.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\dev\workspace-pessoal\CadastroProdutos\app\app.iml" filepath="C:\dev\workspace-pessoal\CadastroProdutos\app\app.iml" />
     </modules>
   </component>
 </project>
