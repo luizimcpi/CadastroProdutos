@@ -22,6 +22,7 @@ public class FormularioProdutos extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario_produtos);
 
+        produto = new Produto();
         produtosDao = new ProdutosDao(FormularioProdutos.this);
         Intent intent = getIntent();
         editarProduto = (Produto) intent.getSerializableExtra("produto-escolhido");
@@ -35,6 +36,12 @@ public class FormularioProdutos extends AppCompatActivity {
 
         if(editarProduto != null){
             btn_Cadastro.setText("Modificar");
+            editText_NomeProd.setText(editarProduto.getNomeProduto());
+            editText_Descricao.setText(editarProduto.getDescricao());
+            editText_Quantidade.setText(editarProduto.getQuantidade()+"");
+
+            produto.setId(editarProduto.getId());
+
         }else{
             btn_Cadastro.setText("Cadastrar");
         }

@@ -1,16 +1,22 @@
 package cadastroprodutos.devlhse.com.cadastroprodutos.model;
 
+import java.io.Serializable;
+
 /**
  * Created by luizhse on 12/12/17.
  */
 
-public class Produto {
+public class Produto implements Serializable{
 
     private Long id;
     private String nomeProduto;
     private String descricao;
     private int quantidade;
 
+    @Override
+    public String toString(){
+        return nomeProduto.toString();
+    }
 
     public Long getId() {
         return id;
